@@ -1,3 +1,93 @@
-opencv-python>=4.8.0
-mediapipe>=0.10.0
-numpy>=1.24.0
+Requirements
+Python 3.10 or Python 3.11
+Webcam
+
+IMPORTANT:
+
+MediaPipe currently DOES NOT properly support Python 3.13+ / 3.14.
+
+Use Python 3.11 recommended.
+
+Installation
+1. Install Python 3.11
+
+Download:
+
+https://www.python.org/downloads/release/python-3119/
+
+During installation:
+
+Check "Add Python to PATH"
+
+Verify:
+
+py -3.11 --version
+2. Create Virtual Environment
+py -3.11 -m venv venv
+
+Activate:
+
+Windows (Git Bash)
+source venv/Scripts/activate
+Windows (CMD)
+venv\Scripts\activate
+3. Install Dependencies
+pip install -r requirements.txt
+Run Project
+python main.py
+Recommended Versions
+Package	Version
+Python	3.11
+OpenCV	4.9.0
+MediaPipe	0.10.14
+NumPy	1.26.4
+Fix For MediaPipe solutions Error
+
+If you see:
+
+AttributeError: module 'mediapipe' has no attribute 'solutions'
+
+You are probably using Python 3.14.
+
+Fix:
+
+py -3.11 -m venv venv
+source venv/Scripts/activate
+pip install -r requirements.txt
+Troubleshooting
+Webcam not opening
+
+Change:
+
+cv2.VideoCapture(0)
+
+to:
+
+cv2.VideoCapture(1)
+Hand not detected
+Improve lighting
+Move closer to camera
+Lower confidence threshold
+False key presses
+
+Reduce click threshold:
+
+click_threshold=0.04
+Low FPS
+
+Reduce webcam resolution inside main.py.
+
+License
+
+MIT License
+
+
+---
+
+# `requirements.txt`
+
+```txt
+opencv-python==4.9.0.80
+mediapipe==0.10.14
+numpy==1.26.4
+python-dotenv==1.0.1
