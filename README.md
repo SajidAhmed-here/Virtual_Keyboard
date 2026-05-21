@@ -6,6 +6,7 @@ Control the keyboard entirely using webcam hand gestures:
 - Pinch fingers to type
 - Hold Backspace for continuous delete
 - Wave hand to clear text
+- project demo video: https://youtu.be/MSCX49JL5Yg
 
 ---
 
